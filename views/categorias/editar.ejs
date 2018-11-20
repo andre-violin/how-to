@@ -3,12 +3,12 @@
 
     <h2>Adicionar Categorias</h2>
 
-    <form class="uk-form-stacked" method="POST" action="/categorias/nova">
+    <form class="uk-form-stacked" method="POST" action="/categorias/editar/<%= categoria.id %>">
 
             <div class="uk-margin">
                 <label class="uk-form-label" for="categoria">Categoria</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="categoria" placeholder="Nome da categoria..." type="text" name="categoria">
+                    <input class="uk-input" id="categoria" value="<%= categoria.categoria %>" type="text" name="categoria">
                 </div>
                 
             </div>
