@@ -16,8 +16,9 @@ const list = async (req, res) => {
     res.render('categorias/index', { categorias })
 }
 
- const deleteItem = async (req, res) => {
+const deleteItem = async (req, res) => {
     await api.deleteItem('categorias', req.params.id)
+    await api.deleteItem('publicacoes', req.params.id)
     res.redirect('/categorias')
 }
 
